@@ -1,0 +1,25 @@
+.chart-card {
+  background-color: var(--bg-surface, #111113);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-sm, 6px);
+  padding: var(--space-5, 20px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+.chart-card-title {
+  font-size: var(--text-sm, 14px);
+  color: var(--text-secondary, #a1a1aa);
+  font-weight: var(--weight-medium, 500);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide, 0.05em);
+  margin-bottom: var(--space-4, 16px);
+}
+
+.chart-card-content {
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+}

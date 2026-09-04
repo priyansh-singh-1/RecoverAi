@@ -1,0 +1,63 @@
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.drawer-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border);
+  height: 100%;
+  max-width: 100%;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.drawer-title {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.drawer-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) ease;
+}
+
+.drawer-close:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.drawer-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+}

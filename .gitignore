@@ -1,0 +1,25 @@
+# Frontend
+Frontend/node_modules/
+Frontend/dist/
+
+# Python
+ml/venv/
+ml/__pycache__/
+*.pyc
+
+# Java
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / env
+.env
+.env.*
+application.properties

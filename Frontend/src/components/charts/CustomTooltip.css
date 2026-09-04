@@ -1,0 +1,31 @@
+.custom-tooltip {
+  background-color: #161618;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.custom-tooltip-label {
+  color: #a1a1aa;
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.custom-tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #f4f4f5;
+  margin-top: 4px;
+}
+
+.custom-tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.custom-tooltip-delta { margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--border); color: var(--signal); font-size: var(--text-xs); }

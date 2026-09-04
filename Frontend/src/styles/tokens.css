@@ -1,0 +1,172 @@
+/* ============================================================
+   RecoverAI — Design Tokens
+   Dark mode first. Restrained, financial-grade color system.
+   ============================================================ */
+
+:root {
+  /* --- Surface layers --- */
+  --canvas: #070a12;
+  --sidebar: #090d17;
+  --surface-1: #0d1220;
+  --surface-2: #111827;
+  --surface-3: #151d2e;
+  --bg-base: var(--canvas);
+  --bg-sidebar: var(--sidebar);
+  --bg-surface: var(--surface-1);
+  --bg-elevated: var(--surface-2);
+  --bg-subtle: var(--surface-3);
+  --bg-hover: #1a2437;
+  --bg-active: #202c43;
+
+  /* Backwards-compatible names used by page-level styles. */
+  --bg-primary: var(--bg-base);
+  --bg-secondary: var(--bg-surface);
+  --bg-tertiary: var(--bg-elevated);
+
+  /* --- Borders --- */
+  --border: rgba(148, 163, 184, 0.10);
+  --border-subtle: rgba(148, 163, 184, 0.06);
+  --border-strong: rgba(148, 163, 184, 0.16);
+  --border-highlight: rgba(124, 92, 255, 0.24);
+  --border-focus: rgba(124, 92, 255, 0.55);
+  --border-color: var(--border);
+
+  /* --- Text --- */
+  --text-primary: #f8fafc;
+  --text-secondary: #a8b2c3;
+  --text-muted: #64748b;
+  --text-disabled: #475569;
+  --text-inverse: #070a12;
+
+  /* --- Accent --- */
+  --intelligence: #7c5cff;
+  --signal: #36c5f0;
+  --accent: var(--intelligence);
+  --accent-muted: rgba(124, 92, 255, 0.12);
+  --accent-hover: #9a83ff;
+  --color-primary: var(--accent);
+  --color-success: var(--success);
+
+  /* --- Status / semantic --- */
+  --recovered: #2dd4a8;
+  --success: var(--recovered);
+  --success-muted: rgba(45, 212, 168, 0.12);
+  --success-text: #65e2bf;
+
+  --warning: #f5b942;
+  --warning-muted: rgba(245, 185, 66, 0.12);
+  --warning-text: #ffd374;
+
+  --danger: #ff667d;
+  --danger-muted: rgba(255, 102, 125, 0.12);
+  --danger-text: #ff8da0;
+
+  --info: var(--signal);
+  --info-muted: rgba(54, 197, 240, 0.12);
+  --info-text: #79d9f5;
+
+  --purple: var(--intelligence);
+  --purple-muted: var(--accent-muted);
+  --purple-text: #b8aaff;
+
+  /* --- Recovery-specific status colors --- */
+  --status-open: var(--warning);
+  --status-open-muted: var(--warning-muted);
+  --status-recovered: var(--success);
+  --status-recovered-muted: var(--success-muted);
+  --status-stopped: var(--danger);
+  --status-stopped-muted: var(--danger-muted);
+  --status-in-progress: var(--info);
+  --status-in-progress-muted: var(--info-muted);
+  --status-requires-approval: var(--purple);
+  --status-requires-approval-muted: var(--purple-muted);
+  --status-expired: var(--text-muted);
+  --status-expired-muted: rgba(82, 82, 91, 0.2);
+  --status-failed: var(--danger);
+  --status-failed-muted: var(--danger-muted);
+
+  /* --- Priority colors --- */
+  --priority-critical: var(--danger);
+  --priority-critical-muted: var(--danger-muted);
+  --priority-high: #ff9b70;
+  --priority-high-muted: rgba(255, 155, 112, 0.1);
+  --priority-medium: var(--warning);
+  --priority-medium-muted: var(--warning-muted);
+  --priority-low: #94a3b8;
+  --priority-low-muted: rgba(148, 163, 184, 0.1);
+
+  /* --- Sizing --- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  /* --- Spacing scale (4px grid) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* --- Typography --- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 22px;
+  --text-3xl: 28px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* --- Letter spacing --- */
+  --tracking-tight: -0.02em;
+  --tracking-normal: -0.01em;
+  --tracking-wide: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* --- Transitions --- */
+  --duration-fast: 100ms;
+  --duration-base: 150ms;
+  --duration-slow: 250ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* --- Layout --- */
+  --sidebar-width: 220px;
+  --sidebar-collapsed: 56px;
+  --topbar-height: 52px;
+  --content-max: 1400px;
+
+  /* --- Shadows (very subtle) --- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  /* --- Chart colors --- */
+  --chart-1: #7c5cff;
+  --chart-2: #36c5f0;
+  --chart-3: #2dd4a8;
+  --chart-4: #64748b;
+  --chart-5: #f5b942;
+  --chart-6: #ff667d;
+}

@@ -1,0 +1,34 @@
+.shell-container {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  min-height: 100vh;
+  background-color: var(--bg-base);
+}
+
+.shell-main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.shell-content {
+  overflow-y: auto;
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-6);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .shell-container {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .shell-content {
+    padding: var(--space-3);
+  }
+}

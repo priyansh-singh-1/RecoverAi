@@ -1,0 +1,130 @@
+.audit-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: var(--space-4, 16px) 0;
+  margin-left: 16px;
+}
+
+.timeline-event {
+  display: flex;
+  gap: var(--space-4, 16px);
+  position: relative;
+  padding-bottom: var(--space-6, 24px);
+}
+
+.timeline-event:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-event.important .timeline-content {
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-3);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 32px;
+  bottom: -8px;
+  left: 15px;
+  width: 2px;
+  background-color: var(--border, rgba(255,255,255,0.08));
+  z-index: 1;
+}
+
+.timeline-event:last-child .timeline-line {
+  display: none;
+}
+
+.timeline-icon-container {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-subtle, #1a1a1d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+  border: 2px solid var(--border, rgba(255,255,255,0.08));
+}
+
+.timeline-content {
+  flex-grow: 1;
+  padding-top: 4px;
+  min-width: 0;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.timeline-title {
+  color: var(--text-primary, #f4f4f5);
+  font-size: var(--text-sm, 14px);
+  font-weight: var(--weight-medium, 500);
+}
+
+.timeline-timestamp {
+  color: var(--text-muted, #52525b);
+  font-size: 11px;
+}
+
+.timeline-actor {
+  color: var(--text-muted, #52525b);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.timeline-reason {
+  color: var(--text-secondary, #a1a1aa);
+  font-size: var(--text-sm, 14px);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.timeline-state-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background-color: rgba(255,255,255,0.03);
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.state-old { color: var(--text-muted, #52525b); text-decoration: line-through; }
+.state-arrow { color: var(--text-secondary, #a1a1aa); }
+.state-new { color: var(--text-primary, #f4f4f5); font-weight: 500; }
+
+.timeline-metadata-toggle {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 4px;
+}
+
+.timeline-metadata-toggle:hover {
+  text-decoration: underline;
+}
+
+.timeline-metadata {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid var(--border, rgba(255,255,255,0.08));
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 11px;
+  color: #a1a1aa;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}

@@ -1,0 +1,14 @@
+.recovery-pulse { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface-1); }
+.pulse-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); }
+.pulse-heading h2 { margin-top: var(--space-1); font-size: var(--text-lg); letter-spacing: 0; }
+.pulse-live { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--text-muted); font-size: var(--text-xs); }
+.pulse-live i { width: 6px; height: 6px; border-radius: 50%; background: var(--recovered); }
+.pulse-track { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+.pulse-track svg { position: absolute; top: 17px; left: 8%; width: 84%; height: 10px; pointer-events: none; }
+.pulse-track path { fill: none; stroke: var(--border-highlight); stroke-width: 1.5; stroke-dasharray: 3 5; }
+.pulse-step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-1); text-align: center; }
+.pulse-step::before { content: ''; width: 9px; height: 9px; margin-bottom: var(--space-1); border: 2px solid var(--surface-1); border-radius: 50%; background: var(--intelligence); box-shadow: 0 0 0 1px var(--border-highlight); }
+.pulse-step strong { color: var(--text-primary); font-size: var(--text-xl); font-variant-numeric: tabular-nums; }
+.pulse-step span { color: var(--text-muted); font-size: var(--text-xs); }
+.pulse-ml::before { background: var(--signal); }.pulse-ai::before { background: var(--intelligence); }.pulse-executed::before { background: var(--recovered); }
+@media (max-width: 560px) { .recovery-pulse { padding: var(--space-4); } .pulse-track { gap: var(--space-2); } .pulse-step strong { font-size: var(--text-lg); } .pulse-step span { font-size: 10px; } }
