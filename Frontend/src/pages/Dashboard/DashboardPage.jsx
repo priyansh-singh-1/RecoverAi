@@ -18,9 +18,9 @@ import './DashboardPage.css';
 export function DashboardPage() {
   const { openNewRecovery, refresh } = useShellActions();
   const { data, isLoading, isError, refetch } = useRecoveryMetrics();
-  const { data: cases } = useRecoveryCases();
+  const { data: cases, isLoading: areCasesLoading } = useRecoveryCases();
 
-  if (isLoading) {
+  if (isLoading || areCasesLoading) {
     return (
       <div className="dashboard-page">
         <TopBar title="Overview" subtitle="Executive recovery summary" onNewRecovery={openNewRecovery} onRefresh={refresh} />
