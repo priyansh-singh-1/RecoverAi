@@ -307,6 +307,7 @@ public class RecoveryService {
 
     }
 
+    @Transactional(readOnly = true)
     public List<RecoveryCaseResponse> getAllRecoveryCases(){
         return recoveryCaseRepository.findAll()
                 .stream()
@@ -314,6 +315,7 @@ public class RecoveryService {
                 .toList();
     }
 
+    @Transactional(readOnly = true)
     public List<RecoveryCaseResponse> getOpenRecoveryCases(){
         return recoveryCaseRepository.findByStatus(RecoveryStatus.OPEN)
                 .stream()
