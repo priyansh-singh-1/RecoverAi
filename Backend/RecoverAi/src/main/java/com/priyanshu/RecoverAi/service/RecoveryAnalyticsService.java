@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.priyanshu.RecoverAi.enums.RecoveryExecutionStatus;
 import com.priyanshu.RecoverAi.repository.RecoveryActionExecutionRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -25,6 +26,7 @@ public class RecoveryAnalyticsService {
 
     private final RecoveryActionExecutionRepository recoveryActionExecutionRepository;
 
+    @Transactional(readOnly = true)
     public RecoveryMetricsResponse getRecoveryMetrics() {
 
         List<RecoveryCase> cases =
