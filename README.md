@@ -8,6 +8,18 @@ Instead of blindly retrying every failed transaction, RecoverAI combines a deter
 
 ---
 
+## 🌐 Live Demo
+
+- **Frontend:** https://recover-ai-xi-plum.vercel.app/
+- **Backend API:** https://recoverai-api-0a22.onrender.com
+- **ML Service:** https://recoverai-ml-ht3b.onrender.com
+
+> **Try the live application:** Open the frontend dashboard to explore the complete AI-powered revenue recovery workflow.
+
+> **Note:** Backend and ML services are hosted on Render and may take a short time to wake up after inactivity.
+
+---
+
 ## 💡 The Problem
 
 Payment failures directly impact merchant revenue.
@@ -420,6 +432,40 @@ This makes it possible to answer:
 > **What happened, who/what made the decision, why did it happen, and what was the final outcome?**
 
 ---
+
+## 📊 Production Demo Results
+
+RecoverAI has been deployed and tested through the complete recovery lifecycle.
+
+A production demo scenario processed two failed payments with a combined revenue at risk of **₹13,000**.
+
+For one ₹6,500 network-error payment:
+
+- Rule Engine recommended `WAIT_AND_RETRY`
+- ML predicted an **87% recovery probability**
+- Policy Engine selected `RETRY_PAYMENT`
+- Gemini generated the recovery diagnosis and explanation
+- Policy Guard verified the AI response
+- Recovery action was successfully executed
+- A signed `payment.captured` event completed the payment lifecycle
+- The recovery case was marked `RECOVERED`
+
+### Result
+
+| Metric | Value |
+|---|---:|
+| Total Revenue at Risk | ₹13,000 |
+| Recovered Revenue | ₹6,500 |
+| Outstanding Revenue | ₹6,500 |
+| Recovery Rate | 50% |
+| ML Scored Cases | 2 |
+| Successful Recovery Execution | 1 |
+
+This demonstrates the complete flow from **payment failure → intelligent decision → governed execution → payment capture → measurable recovered revenue**.
+
+---
+
+
 
 # 🧰 Tech Stack
 
