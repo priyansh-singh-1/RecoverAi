@@ -107,6 +107,13 @@
   opacity: 0.7;
 }
 
+.dashboard-loading-message {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .overview-hero { grid-template-columns: 1fr; gap: var(--space-3); }
   .hero-section {

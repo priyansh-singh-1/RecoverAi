@@ -19,8 +19,20 @@ export function DashboardPage() {
   const { openNewRecovery, refresh } = useShellActions();
   const { data, isLoading, isError, refetch } = useRecoveryMetrics();
   const { data: cases, isLoading: areCasesLoading } = useRecoveryCases();
+  const [isSlowLoading, setIsSlowLoading] = React.useState(false);
+  const isDashboardLoading = isLoading || areCasesLoading;
 
-  if (isLoading || areCasesLoading) {
+  React.useEffect(() => {
+    if (!isDashboardLoading) {
+      setIsSlowLoading(false);
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => setIsSlowLoading(true), 3000);
+    return () => window.clearTimeout(timer);
+  }, [isDashboardLoading]);
+
+  if (isDashboardLoading) {
     return (
       <div className="dashboard-page">
         <TopBar title="Overview" subtitle="Executive recovery summary" onNewRecovery={openNewRecovery} onRefresh={refresh} />
@@ -37,6 +49,7 @@ export function DashboardPage() {
             <Skeleton height="300px" />
             <Skeleton height="300px" />
           </div>
+          {isSlowLoading && <p className="dashboard-loading-message">Waking up RecoverAI services — first load may take up to a minute.</p>}
         </div>
       </div>
     );
